@@ -1,0 +1,18 @@
+[submodule "video"]
+	path = video
+	url = git@github.com:tmackall/video.git
+[submodule "notification"]
+	path = notification
+	url = git@github.com:tmackall/notifications.git
+[submodule "camera"]
+	path = camera
+	url = git@github.com:tmackall/camera.git
+[submodule "db"]
+	path = db
+	url = git@github.com:tmackall/db.git
+[submodule "client_ws"]
+	path = client_ws
+	url = it@github.com:tmackall/client_ws.git
+[submodule "wemo"]
+	path = wemo
+	url = git@github.com:tmackall/wemo.git

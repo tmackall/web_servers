@@ -1,0 +1,6 @@
+node_modules
+.*swp
+t
+t.sh
+y
+y.sh
