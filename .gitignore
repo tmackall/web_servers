@@ -1,4 +1,6 @@
 node_modules
+*.zip
+*.bck
 .*swp
 t
 t.sh

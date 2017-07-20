@@ -7,13 +7,15 @@ services:
       - LL=debug
     ports:
       - "3000:3000"
-  wemo-svr:
+    restart: always
+Z wemo-svr:
     build: ./wemo
     image: tmackall/wemo-svr:latest
     environment:
       - LL=debug
     ports:
       - "3010:3010"
+    restart: always
   db-svr:
     build: ./db
     image: tmackall/db-svr:latest
@@ -21,6 +23,7 @@ services:
       - LL=debug
     ports:
       - "3002:3002"
+    restart: always
   notification-svr:
     build: ./notification
     image: tmackall/notification-svr:latest
@@ -31,6 +34,7 @@ services:
     volumes:
       - /mnt/usbdrive/pics:/pics
       - /mnt/usbdrive/zip_files:/zip_files
+    restart: always
   video-svr:
     build: ./video
     image: tmackall/video-svr:latest
@@ -41,3 +45,4 @@ services:
     volumes:
       - /mnt/usbdrive/video-movement:/video-movement
       - /mnt/usbdrive/video-files:/video-files
+    restart: always
