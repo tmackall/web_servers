@@ -1,14 +1,14 @@
 version: '3'
 services:
+# cam-svr:
+#    build: ./camera
+#    image: tmackall/camera-svr:latest
+#    environment:
+#      - LL=debug
+#    ports:
+#      - "3000:3000"
+#    restart: always
   wemo-svr:
-    build: ./camera
-    image: tmackall/camera-svr:latest
-    environment:
-      - LL=debug
-    ports:
-      - "3000:3000"
-    restart: always
-Z wemo-svr:
     build: ./wemo
     image: tmackall/wemo-svr:latest
     environment:
@@ -16,33 +16,33 @@ Z wemo-svr:
     ports:
       - "3010:3010"
     restart: always
-  db-svr:
-    build: ./db
-    image: tmackall/db-svr:latest
-    environment:
-      - LL=debug
-    ports:
-      - "3002:3002"
-    restart: always
-  notification-svr:
-    build: ./notification
-    image: tmackall/notification-svr:latest
-    environment:
-      - LL=debug
-    ports:
-      - "3005:3005"
-    volumes:
-      - /mnt/usbdrive/pics:/pics
-      - /mnt/usbdrive/zip_files:/zip_files
-    restart: always
-  video-svr:
-    build: ./video
-    image: tmackall/video-svr:latest
-    environment:
-      - LL=debug
-    ports:
-      - "3003:3003"
-    volumes:
-      - /mnt/usbdrive/video-movement:/video-movement
-      - /mnt/usbdrive/video-files:/video-files
-    restart: always
+#  db-svr:
+#    build: ./db
+#    image: tmackall/db-svr:latest
+#    environment:
+#      - LL=debug
+#    ports:
+#      - "3002:3002"
+#    restart: always
+#  notification-svr:
+#    build: ./notification
+#    image: tmackall/notification-svr:latest
+#    environment:
+#      - LL=debug
+#    ports:
+#      - "3005:3005"
+#    volumes:
+#      - /mnt/usbdrive/pics:/pics
+#      - /mnt/usbdrive/zip_files:/zip_files
+#    restart: always
+#  video-svr:
+#    build: ./video
+#    image: tmackall/video-svr:latest
+#    environment:
+#      - LL=debug
+#    ports:
+#      - "3003:3003"
+#    volumes:
+#      - /mnt/usbdrive/video-movement:/video-movement
+#      - /mnt/usbdrive/video-files:/video-files
+#    restart: always
